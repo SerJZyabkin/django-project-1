@@ -32,8 +32,8 @@ https://templatemo.com/tm-555-upright
                     </button>
                     <div>
                         <div class="tm-brand-box">
-                            <h2 class="tm-brand">Название</h2>
-                        </div>                
+                            <h2 class="tm-brand">КабСбор</h2>
+                        </div>
                         <ul id="tm-main-nav">
                             <li class="nav-item">                                
                                 <a href="#home" class="nav-link current">
@@ -42,13 +42,7 @@ https://templatemo.com/tm-555-upright
                                     Главная
                                 </a>
                             </li>
-<!--                            <li class="nav-item">-->
-<!--                                <a href="#gallery" class="nav-link">-->
-<!--                                    <div class="triangle-right"></div>-->
-<!--                                    <i class="fas fa-images nav-icon"></i>-->
-<!--                                    Галерея-->
-<!--                                </a>-->
-<!--                            </li>-->
+
                             <li class="nav-item">
                                 <a href="#about" class="nav-link">
                                     <div class="triangle-right"></div>
@@ -56,6 +50,15 @@ https://templatemo.com/tm-555-upright
                                     О компании
                                 </a>
                             </li>
+
+                            <li class="nav-item">
+                                <a href="#products" class="nav-link">
+                                    <div class="triangle-right"></div>
+                                    <i class="fas fa-cart-arrow-down nav-icon"></i>
+                                    Продукция
+                                </a>
+                            </li>
+
                             <li class="nav-item">
                                 <a href="#contact" class="nav-link">
                                     <div class="triangle-right"></div>
@@ -63,18 +66,8 @@ https://templatemo.com/tm-555-upright
                                     Контакты
                                 </a>
                             </li>
-<!--                            <li class="nav-item">-->
-<!--                                <a href="https://paypal.me/templatemo" class="nav-link external" target="_parent" rel="sponsored">-->
-<!--                                    <div class="triangle-right"></div>-->
-<!--                                    <i class="fas fa-external-link-alt nav-icon"></i>-->
-<!--                                    External-->
-<!--                                </a>-->
-<!--                            </li>-->
                         </ul>
                     </div>
-<!--                    <footer class="mb-3 tm-mt-100">-->
-<!--                        Design: <a href="https://templatemo.com" target="_parent" rel="sponsored">TemplateMo</a>-->
-<!--                    </footer>-->
                 </nav>
             </div>
             
@@ -88,11 +81,17 @@ https://templatemo.com/tm-555-upright
                         <div class="row">
                             <div class="col-lg-6 tm-col-home mb-4">
                                 <div class="tm-text-container">
+                                    <div class="tm-icon-container mb-5 mr-0 ml-auto">
+                                        <i class="fas fa-broadcast-tower fa-4x tm-text-primary"></i>
+                                    </div>
+
                                     <p>
                                         Две горизонтальные колонки с текстом. Можно добавить иконку или например картинку.
                                         Текст забит жестко в шаблон и не будет меняться со временем.
                                     </p>
                                     <p>
+
+
                                         Кто опишет Негодованье, гнев царя? Гремит анафема в соборах;
                                         Мазепы лик терзает кат. На шумной раде, в вольных спорах
                                         Другого гетмана творят.  С брегов пустынных Енисея
@@ -105,9 +104,6 @@ https://templatemo.com/tm-555-upright
                                         Для шлема кинувший венец, Твой близок день, ты вал Полтавы
                                         Вдали завидел наконец. И царь туда ж помчал дружины.
                                     </p>
-                                    <div class="tm-icon-container mb-5 mr-0 ml-auto">
-                                        <i class="fas fa-broadcast-tower fa-4x tm-text-primary"></i>
-                                    </div>
                                 </div>
                             </div>
                             <div class="col-lg-6 tm-col-home mb-4">
@@ -161,333 +157,23 @@ https://templatemo.com/tm-555-upright
                                         <i class="fas fa-dove fa-4x tm-post-icon tm-text-primary"></i>
                                     {% endif %}
 
+                                     {% if news_entry.icon == "cloud-moon-rain" %}
+                                        <i class="fas fa-cloud-moon-rain fa-4x tm-post-icon tm-text-primary"></i>
+                                    {% endif %}
+
                                     <div class="media-body">
                                         <a href="#" class="d-block mb-2 tm-text-primary tm-post-link">{{news_entry.name}}</a>
                                         <p>{{news_entry.description}} </p>
-                                    </div>                                    
+                                    </div>
                                 </div>
                                 {% endfor %}
-<!--                                <div class="media mb-4">-->
-<!--                                    <i class="fas fa-cloud-sun fa-4x tm-post-icon tm-text-primary"></i>-->
-<!--                                    <div class="media-body">-->
-<!--                                        <a href="#" class="d-block mb-2 tm-text-primary tm-post-link">22 September 2020</a>  -->
-<!--                                        <p>-->
-<!--                                            You are not allowed to re-distribute this template as a ZIP file -->
-<!--                                            on any template collection website for the template download purpose. -->
-<!--                                            Please contact us for more information.-->
-<!--                                        </p>-->
-<!--                                    </div>                                    -->
-<!--                                </div>-->
-<!--                                <div class="media mb-4">-->
-<!--                                    <i class="fas fa-dove fa-4x tm-post-icon tm-text-primary"></i>-->
-<!--                                    <div class="media-body">-->
-<!--                                        <a href="#" class="d-block mb-2 tm-text-primary tm-post-link">16 September 2020</a>  -->
-<!--                                        <p>-->
-<!--                                            You may want to support us by making   <a href="https://paypal.me/templatemo" target="_parent" rel="sponsored">a small donation via PayPal</a>. That will be helpful. We hope you like this Upright Template for your work.-->
-<!--                                        </p>-->
-<!--                                    </div>                                    -->
-<!--                                </div>-->
                             </div>
                             <div class="tm-col-home mr-0 ml-auto">
-                                <div class="tm-img-home-container"></div>                                
+                                <div class="tm-img-home-container"></div>
                             </div>
                         </div>
                     </section>
                 </div>
-                <!-- Gallery section -->
-<!--                <div class="tm-section-wrap">-->
-<!--                    <div class="tm-parallax" data-parallax="scroll" data-image-src="{% static 'img/img-02.jpg' %}"></div>-->
-<!--                    <section id="gallery" class="tm-section">-->
-<!--                        <h2 class="tm-text-primary">Какая то галерея</h2>-->
-<!--                        <hr class="mb-5">-->
-<!--                        <ul class="tm-gallery-links">-->
-<!--                            <li>-->
-<!--                                <a href="javascript:void(0);" class="active tm-gallery-link" data-filter="*">-->
-<!--                                    <i class="fas fa-layer-group tm-gallery-link-icon"></i>-->
-<!--                                    All-->
-<!--                                </a>-->
-<!--                            </li>-->
-<!--                            <li>-->
-<!--                                <a href="javascript:void(0);" class="tm-gallery-link" data-filter="portrait">-->
-<!--                                    <i class="fas fa-portrait tm-gallery-link-icon"></i>-->
-<!--                                    Portraits-->
-<!--                                </a>-->
-<!--                            </li>-->
-<!--                            <li>-->
-<!--                                <a href="javascript:void(0);" class="tm-gallery-link" data-filter="nature">-->
-<!--                                    <i class="fas fa-leaf tm-gallery-link-icon"></i>-->
-<!--                                    Nature-->
-<!--                                </a>-->
-<!--                            </li>-->
-<!--                            <li>-->
-<!--                                <a href="javascript:void(0);" class="tm-gallery-link" data-filter="animal">-->
-<!--                                    <i class="fas fa-paw tm-gallery-link-icon"></i>-->
-<!--                                    Animals-->
-<!--                                </a>-->
-<!--                            </li>-->
-<!--                            <li>-->
-<!--                                <a href="javascript:void(0);" class="tm-gallery-link" data-filter="building">-->
-<!--                                    <i class="far fa-building tm-gallery-link-icon"></i>-->
-<!--                                    Buildings-->
-<!--                                </a>-->
-<!--                            </li>-->
-<!--                        </ul>-->
-<!--                        <div class="tm-gallery">-->
-<!--                            <figure class="effect-honey tm-gallery-item portrait">-->
-<!--                                <img src="{% static 'img/gallery/tn/portrait-01.jpg' %}" alt="Image"/>-->
-<!--                                <figcaption>-->
-<!--                                    <h2><i>Dreamy Honey</i></h2>-->
-<!--                                    <a href="{% static 'img/gallery/portrait-01.jpg' %}">View more</a>-->
-<!--                                </figcaption>-->
-<!--                            </figure>-->
-<!--                            <figure class="effect-honey tm-gallery-item building">-->
-<!--                                <img src="{% static 'img/gallery/tn/building-01.jpg' %}" alt="Image"/>-->
-<!--                                <figcaption>-->
-<!--                                    <h2><i>Dreamy Honey</i></h2>-->
-<!--                                    <a href="{% static 'img/gallery/building-01.jpg' %}">View more</a>-->
-<!--                                </figcaption>-->
-<!--                            </figure>-->
-<!--                            <figure class="effect-honey tm-gallery-item nature">-->
-<!--                                <img src="{% static 'img/gallery/tn/nature-01.jpg' %}" alt="Image"/>-->
-<!--                                <figcaption>-->
-<!--                                    <h2><i>Dreamy Honey</i></h2>-->
-<!--                                    <a href="{% static 'img/gallery/nature-01.jpg' %}">View more</a>-->
-<!--                                </figcaption>-->
-<!--                            </figure>-->
-<!--                            <figure class="effect-honey tm-gallery-item animal">-->
-<!--                                <img src="{% static 'img/gallery/tn/animal-01.jpg' %}" alt="Image"/>-->
-<!--                                <figcaption>-->
-<!--                                    <h2><i>Dreamy Honey</i></h2>-->
-<!--                                    <a href="{% static 'img/gallery/animal-01.jpg' %}">View more</a>-->
-<!--                                </figcaption>-->
-<!--                            </figure>-->
-<!--                            <figure class="effect-honey tm-gallery-item building">-->
-<!--                                <img src="{% static 'img/gallery/tn/building-02.jpg' %}" alt="Image"/>-->
-<!--                                <figcaption>-->
-<!--                                    <h2><i>Dreamy Honey</i></h2>-->
-<!--                                    <a href="{% static 'img/gallery/building-02.jpg' %}">View more</a>-->
-<!--                                </figcaption>-->
-<!--                            </figure>-->
-<!--                            <figure class="effect-honey tm-gallery-item nature">-->
-<!--                                <img src="{% static 'img/gallery/tn/nature-02.jpg' %}" alt="Image"/>-->
-<!--                                <figcaption>-->
-<!--                                    <h2><i>Dreamy Honey</i></h2>-->
-<!--                                    <a href="{% static 'img/gallery/nature-02.jpg' %}">View more</a>-->
-<!--                                </figcaption>-->
-<!--                            </figure>-->
-<!--                            <figure class="effect-honey tm-gallery-item portrait">-->
-<!--                                <img src="{% static 'img/gallery/tn/portrait-02.jpg' %}" alt="Image"/>-->
-<!--                                <figcaption>-->
-<!--                                    <h2><i>Dreamy Honey</i></h2>-->
-<!--                                    <a href="{% static 'img/gallery/portrait-02.jpg' %}">View more</a>-->
-<!--                                </figcaption>-->
-<!--                            </figure>-->
-<!--                            <figure class="effect-honey tm-gallery-item animal">-->
-<!--                                <img src="{% static 'img/gallery/tn/animal-02.jpg' %}" alt="Image"/>-->
-<!--                                <figcaption>-->
-<!--                                    <h2><i>Dreamy Honey</i></h2>-->
-<!--                                    <a href="{% static 'img/gallery/animal-02.jpg' %}">View more</a>-->
-<!--                                </figcaption>-->
-<!--                            </figure>-->
-<!--                            <figure class="effect-honey tm-gallery-item building">-->
-<!--                                <img src="{% static 'img/gallery/tn/building-03.jpg' %}" alt="Image"/>-->
-<!--                                <figcaption>-->
-<!--                                    <h2><i>Dreamy Honey</i></h2>-->
-<!--                                    <a href="{% static 'img/gallery/building-03.jpg' %}">View more</a>-->
-<!--                                </figcaption>-->
-<!--                            </figure>-->
-<!--                            <figure class="effect-honey tm-gallery-item portrait">-->
-<!--                                <img src="{% static 'img/gallery/tn/portrait-03.jpg' %}" alt="Image"/>-->
-<!--                                <figcaption>-->
-<!--                                    <h2><i>Dreamy Honey</i></h2>-->
-<!--                                    <a href="{% static 'img/gallery/portrait-03.jpg' %}">View more</a>-->
-<!--                                </figcaption>-->
-<!--                            </figure>-->
-<!--                            <figure class="effect-honey tm-gallery-item animal">-->
-<!--                                <img src="{% static 'img/gallery/tn/animal-03.jpg' %}" alt="Image"/>-->
-<!--                                <figcaption>-->
-<!--                                    <h2><i>Dreamy Honey</i></h2>-->
-<!--                                    <a href="{% static 'img/gallery/animal-03.jpg' %}">View more</a>-->
-<!--                                </figcaption>-->
-<!--                            </figure>-->
-<!--                            <figure class="effect-honey tm-gallery-item nature">-->
-<!--                                <img src="{% static 'img/gallery/tn/nature-03.jpg' %}" alt="Image"/>-->
-<!--                                <figcaption>-->
-<!--                                    <h2><i>Dreamy Honey</i></h2>-->
-<!--                                    <a href="{% static 'img/gallery/nature-03.jpg' %}">View more</a>-->
-<!--                                </figcaption>-->
-<!--                            </figure>-->
-<!--                            <figure class="effect-honey tm-gallery-item animal">-->
-<!--                                <img src="{% static 'img/gallery/tn/animal-04.jpg' %}" alt="Image"/>-->
-<!--                                <figcaption>-->
-<!--                                    <h2><i>Dreamy Honey</i></h2>-->
-<!--                                    <a href="{% static 'img/gallery/animal-04.jpg' %}">View more</a>-->
-<!--                                </figcaption>-->
-<!--                            </figure>-->
-<!--                            <figure class="effect-honey tm-gallery-item building">-->
-<!--                                <img src="{% static 'img/gallery/tn/building-04.jpg' %}" alt="Image"/>-->
-<!--                                <figcaption>-->
-<!--                                    <h2><i>Dreamy Honey</i></h2>-->
-<!--                                    <a href="{% static 'img/gallery/building-04.jpg' %}">View more</a>-->
-<!--                                </figcaption>-->
-<!--                            </figure>-->
-<!--                            <figure class="effect-honey tm-gallery-item nature">-->
-<!--                                <img src="{% static 'img/gallery/tn/nature-04.jpg' %}" alt="Image"/>-->
-<!--                                <figcaption>-->
-<!--                                    <h2><i>Dreamy Honey</i></h2>-->
-<!--                                    <a href="{% static 'img/gallery/nature-04.jpg' %}">View more</a>-->
-<!--                                </figcaption>-->
-<!--                            </figure>-->
-<!--                            <figure class="effect-honey tm-gallery-item portrait">-->
-<!--                                <img src="{% static 'img/gallery/tn/portrait-04.jpg' %}" alt="Image"/>-->
-<!--                                <figcaption>-->
-<!--                                    <h2><i>Dreamy Honey</i></h2>-->
-<!--                                    <a href="{% static 'img/gallery/portrait-04.jpg' %}">View more</a>-->
-<!--                                </figcaption>-->
-<!--                            </figure>-->
-<!--                            <figure class="effect-honey tm-gallery-item animal">-->
-<!--                                <img src="{% static 'img/gallery/tn/animal-05.jpg' %}" alt="Image"/>-->
-<!--                                <figcaption>-->
-<!--                                    <h2><i>Dreamy Honey</i></h2>-->
-<!--                                    <a href="{% static 'img/gallery/animal-05.jpg' %}">View more</a>-->
-<!--                                </figcaption>-->
-<!--                            </figure>-->
-<!--                            <figure class="effect-honey tm-gallery-item building">-->
-<!--                                <img src="{% static 'img/gallery/tn/building-05.jpg' %}" alt="Image"/>-->
-<!--                                <figcaption>-->
-<!--                                    <h2><i>Dreamy Honey</i></h2>-->
-<!--                                    <a href="{% static 'img/gallery/building-05.jpg' %}">View more</a>-->
-<!--                                </figcaption>-->
-<!--                            </figure>-->
-<!--                            <figure class="effect-honey tm-gallery-item portrait">-->
-<!--                                <img src="{% static 'img/gallery/tn/portrait-05.jpg' %}" alt="Image"/>-->
-<!--                                <figcaption>-->
-<!--                                    <h2><i>Dreamy Honey</i></h2>-->
-<!--                                    <a href="{% static 'img/gallery/portrait-05.jpg' %}">View more</a>-->
-<!--                                </figcaption>-->
-<!--                            </figure>-->
-<!--                            <figure class="effect-honey tm-gallery-item nature">-->
-<!--                                <img src="{% static 'img/gallery/tn/nature-05.jpg' %}" alt="Image"/>-->
-<!--                                <figcaption>-->
-<!--                                    <h2><i>Dreamy Honey</i></h2>-->
-<!--                                    <a href="{% static 'img/gallery/nature-05.jpg' %}">View more</a>-->
-<!--                                </figcaption>-->
-<!--                            </figure>-->
-<!--                            <figure class="effect-honey tm-gallery-item nature">-->
-<!--                                <img src="{% static 'img/gallery/tn/nature-06.jpg' %}" alt="Image"/>-->
-<!--                                <figcaption>-->
-<!--                                    <h2><i>Dreamy Honey</i></h2>-->
-<!--                                    <a href="{% static 'img/gallery/nature-06.jpg' %}">View more</a>-->
-<!--                                </figcaption>-->
-<!--                            </figure>-->
-<!--                            <figure class="effect-honey tm-gallery-item animal">-->
-<!--                                <img src="{% static 'img/gallery/tn/animal-06.jpg' %}" alt="Image"/>-->
-<!--                                <figcaption>-->
-<!--                                    <h2><i>Dreamy Honey</i></h2>-->
-<!--                                    <a href="{% static 'img/gallery/animal-06.jpg' %}">View more</a>-->
-<!--                                </figcaption>-->
-<!--                            </figure>-->
-<!--                            <figure class="effect-honey tm-gallery-item building">-->
-<!--                                <img src="{% static 'img/gallery/tn/building-06.jpg' %}" alt="Image"/>-->
-<!--                                <figcaption>-->
-<!--                                    <h2><i>Dreamy Honey</i></h2>-->
-<!--                                    <a href="{% static 'img/gallery/building-06.jpg' %}">View more</a>-->
-<!--                                </figcaption>-->
-<!--                            </figure>-->
-<!--                            <figure class="effect-honey tm-gallery-item portrait">-->
-<!--                                <img src="{% static 'img/gallery/tn/portrait-06.jpg' %}" alt="Image"/>-->
-<!--                                <figcaption>-->
-<!--                                    <h2><i>Dreamy Honey</i></h2>-->
-<!--                                    <a href="{% static 'img/gallery/portrait-06.jpg' %}">View more</a>-->
-<!--                                </figcaption>-->
-<!--                            </figure>-->
-<!--                            <figure class="effect-honey tm-gallery-item nature">-->
-<!--                                <img src="{% static 'img/gallery/tn/nature-07.jpg' %}" alt="Image"/>-->
-<!--                                <figcaption>-->
-<!--                                    <h2><i>Dreamy Honey</i></h2>-->
-<!--                                    <a href="{% static 'img/gallery/nature-07.jpg' %}">View more</a>-->
-<!--                                </figcaption>-->
-<!--                            </figure>-->
-<!--                            <figure class="effect-honey tm-gallery-item portrait">-->
-<!--                                <img src="{% static 'img/gallery/tn/portrait-07.jpg' %}" alt="Image"/>-->
-<!--                                <figcaption>-->
-<!--                                    <h2><i>Dreamy Honey</i></h2>-->
-<!--                                    <a href="{% static 'img/gallery/portrait-07.' %}">View more</a>-->
-<!--                                </figcaption>-->
-<!--                            </figure>-->
-<!--                            <figure class="effect-honey tm-gallery-item animal">-->
-<!--                                <img src="{% static 'img/gallery/tn/animal-07.jpg' %}" alt="Image"/>-->
-<!--                                <figcaption>-->
-<!--                                    <h2><i>Dreamy Honey</i></h2>-->
-<!--                                    <a href="{% static 'img/gallery/animal-07.jpg' %}">View more</a>-->
-<!--                                </figcaption>-->
-<!--                            </figure>-->
-<!--                            <figure class="effect-honey tm-gallery-item building">-->
-<!--                                <img src="{% static 'img/gallery/tn/building-07.jpg' %}" alt="Image"/>-->
-<!--                                <figcaption>-->
-<!--                                    <h2><i>Dreamy Honey</i></h2>-->
-<!--                                    <a href="{% static 'img/gallery/building-07.jpg' %}">View more</a>-->
-<!--                                </figcaption>-->
-<!--                            </figure>-->
-<!--                            <figure class="effect-honey tm-gallery-item portrait">-->
-<!--                                <img src="{% static 'img/gallery/tn/portrait-08.jpg' %}" alt="Image"/>-->
-<!--                                <figcaption>-->
-<!--                                    <h2><i>Dreamy Honey</i></h2>-->
-<!--                                    <a href="{% static 'img/gallery/portrait-08.jpg' %}">View more</a>-->
-<!--                                </figcaption>-->
-<!--                            </figure>-->
-<!--                            <figure class="effect-honey tm-gallery-item building">-->
-<!--                                <img src="{% static 'img/gallery/tn/building-08.jpg' %}" alt="Image"/>-->
-<!--                                <figcaption>-->
-<!--                                    <h2><i>Dreamy Honey</i></h2>-->
-<!--                                    <a href="{% static 'img/gallery/building-08.jpg' %}">View more</a>-->
-<!--                                </figcaption>-->
-<!--                            </figure>-->
-<!--                            <figure class="effect-honey tm-gallery-item nature">-->
-<!--                                <img src="{% static 'img/gallery/tn/nature-08.jpg' %}" alt="Image"/>-->
-<!--                                <figcaption>-->
-<!--                                    <h2><i>Dreamy Honey</i></h2>-->
-<!--                                    <a href="{% static 'img/gallery/nature-08.jpg' %}">View more</a>-->
-<!--                                </figcaption>-->
-<!--                            </figure>-->
-<!--                            <figure class="effect-honey tm-gallery-item animal">-->
-<!--                                <img src="{% static 'img/gallery/tn/animal-08.jpg' %}" alt="Image"/>-->
-<!--                                <figcaption>-->
-<!--                                    <h2><i>Dreamy Honey</i></h2>-->
-<!--                                    <a href="{% static 'img/gallery/animal-08.jpg' %}">View more</a>-->
-<!--                                </figcaption>-->
-<!--                            </figure>-->
-<!--                            <figure class="effect-honey tm-gallery-item building">-->
-<!--                                <img src="{% static 'img/gallery/tn/building-09.jpg' %}" alt="Image"/>-->
-<!--                                <figcaption>-->
-<!--                                    <h2><i>Dreamy Honey</i></h2>-->
-<!--                                    <a href="{% static 'img/gallery/building-09.jpg' %}">View more</a>-->
-<!--                                </figcaption>-->
-<!--                            </figure>-->
-<!--                            <figure class="effect-honey tm-gallery-item nature">-->
-<!--                                <img src="{% static 'img/gallery/tn/nature-09.jpg' %}" alt="Image"/>-->
-<!--                                <figcaption>-->
-<!--                                    <h2><i>Dreamy Honey</i></h2>-->
-<!--                                    <a href="{% static 'img/gallery/nature-09.jpg' %}">View more</a>-->
-<!--                                </figcaption>-->
-<!--                            </figure>-->
-<!--                            <figure class="effect-honey tm-gallery-item portrait">-->
-<!--                                <img src="{% static 'img/gallery/tn/portrait-09.jpg' %}" alt="Image"/>-->
-<!--                                <figcaption>-->
-<!--                                    <h2><i>Dreamy Honey</i></h2>-->
-<!--                                    <a href="{% static 'img/gallery/portrait-09.jpg' %}">View more</a>-->
-<!--                                </figcaption>-->
-<!--                            </figure>-->
-<!--                            <figure class="effect-honey tm-gallery-item animal">-->
-<!--                                <img src="{% static 'img/gallery/tn/animal-09.jpg' %}" alt="Image"/>-->
-<!--                                <figcaption>-->
-<!--                                    <h2><i>Dreamy Honey</i></h2>-->
-<!--                                    <a href="{% static 'img/gallery/animal-09.jpg' %}">View more</a>-->
-<!--                                </figcaption>-->
-<!--                            </figure>-->
-<!--                        </div>-->
-<!--                    </section>-->
-<!--                </div>-->
                 <!-- About section -->
                 <div class="tm-section-wrap">
                     <div class="tm-parallax" data-parallax="scroll" data-image-src="{% static 'img/img-03.jpg' %}"></div>
@@ -496,7 +182,7 @@ https://templatemo.com/tm-555-upright
                         <hr class="mb-5">
                         
                         <div class="row tm-row-about">
-                            <div class="tm-col-about tm-col-about-l">
+                            <div class="tm-text-container">
                                 <p class="mb-4">
                                     Помни же, Мария,
                                     Что ты сказала мне теперь.
@@ -521,12 +207,6 @@ https://templatemo.com/tm-555-upright
                                     Что смерть ему? желанный сон.
                                     Готов он лечь во гроб кровавый.
                                     Дрема долит. Но, боже правый!
-                                </p>
-                            </div>
-                            <div class="tm-col-about tm-col-about-r">
-                                <img src="{% static 'img/img-about-01.jpg' %}" alt="Image" class="img-fluid mb-5 tm-img-about">
-                                <p>
-                                    Какая-то красивая картинка про компанию.
                                 </p>
                             </div>
                             <div class="tm-col-about tm-col-about-l">
@@ -565,18 +245,47 @@ https://templatemo.com/tm-555-upright
                                 </p>
                             </div>
                         </div>
+                    </section>
+                </div>
+                <!-- Products section -->
+                <div class="tm-section-wrap">
+                    <div class="tm-parallax" data-parallax="scroll" data-image-src="{% static 'img/img-03.jpg' %}"></div>
+                    <section id="products" class="tm-section">
+                        <h2 class="tm-text-primary">Продукция</h2>
+                        <hr class="mb-5">
+
+                        <div class="tm-text-container">
+                            <p>
+                                Две горизонтальные колонки с текстом. Можно добавить иконку или например картинку.
+                                Текст забит жестко в шаблон и не будет меняться со временем.
+                            </p>
+                            <p>
+                                Кто опишет Негодованье, гнев царя? Гремит анафема в соборах;
+                                Мазепы лик терзает кат. На шумной раде, в вольных спорах
+                                Другого гетмана творят.  С брегов пустынных Енисея
+                                Семейства Искры, Кочубея  Поспешно призваны Петром.
+                                Он с ними слезы проливает. Он их, лаская, осыпает
+                                И новой честью и добром. Мазепы враг, наездник пылкий,
+                                Старик Палей из мрака ссылки  В Украйну едет в царский стан.
+                                Трепещет бунт осиротелый. На плахе гибнет Чечель смелый
+                                И запорожский атаман. И ты, любовник бранной славы,
+                                Для шлема кинувший венец, Твой близок день, ты вал Полтавы
+                                Вдали завидел наконец. И царь туда ж помчал дружины.
+                            </p>
+                        </div>
+
+
                         <div class="mt-5">
                             <div class="tm-carousel">
-
                                 {% for link in links_out %}
-                                <div class="tm-carousel-item">
+                                <div class="tm-carousel-item" >
                                     <figure class="effect-honey mb-4">
                                         <img src="{{BaseUrl}}/{{link.image}}" alt="Featured Item">
                                         <figcaption>
                                             <ul class="tm-social">
-                                                <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
-                                                <li><a href="https://twitter.com" class="tm-social-link"><i class="fab fa-twitter"></i></a></li>
-                                                <li><a href="https://instagram.com" class="tm-social-link"><i class="fab fa-instagram"></i></a></li>
+<!--                                                <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>-->
+                                                <li><a href="http://localhost:8000/products" class="tm-social-link"><i class="fab fa-cc-visa"></i></a></li>
+<!--                                                <li><a href="https://instagram.com" class="tm-social-link"><i class="fab fa-instagram"></i></a></li>-->
                                             </ul>
                                         </figcaption>
                                     </figure>
@@ -586,156 +295,11 @@ https://templatemo.com/tm-555-upright
                                         <h4 class="tm-text-secondary tm-about-subtitle">{{link.extra_text}}</h4>
                                     </div>
                                 </div>
-
                                 {% endfor %}
-
-                                <div class="tm-carousel-item">
-                                    <figure class="effect-honey mb-4">
-                                        <img src="{% static 'img/about-03.jpg' %}" alt="Featured Item">
-                                        <figcaption>
-                                            Научусь внешнюю ссылку делать
-<!--                                            <ul class="tm-social">-->
-<!--                                                <li><a href="https://yandex.rus" class="tm-social-link"><i class="fab fa-twitter"></i><</a></li>-->
-<!--                                            </ul>-->
-                                        </figcaption>
-                                    </figure>
-                                    <div class="tm-about-text">
-                                        <h3 class="mb-3 tm-text-primary tm-about-title">Заголовок </h3>
-                                        <p>Развернутое описание</p>
-                                        <h4 class="tm-text-secondary tm-about-subtitle">Дополнительный текст</h4>
-                                    </div>
-                                </div>
-
-<!--                                <div class="tm-carousel-item">-->
-<!--                                    <figure class="effect-honey mb-4">-->
-<!--                                        <img src="{% static 'img/about-01.jpg' %}" alt="Featured Item">-->
-<!--                                        <figcaption>-->
-<!--                                            <ul class="tm-social">-->
-<!--                                                <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>-->
-<!--                                                <li><a href="https://twitter.com" class="tm-social-link"><i class="fab fa-twitter"></i></a></li>-->
-<!--                                                <li><a href="https://instagram.com" class="tm-social-link"><i class="fab fa-instagram"></i></a></li>-->
-<!--                                            </ul>-->
-<!--                                        </figcaption>-->
-<!--                                    </figure>-->
-<!--                                    <div class="tm-about-text">-->
-<!--                                        <h3 class="mb-3 tm-text-primary tm-about-title">Calvin Second</h3>-->
-<!--                                        <p>Aliquam efficitur, velit ut aliquet molestie, nulla dolor faucibus neque, quis hendrerit.</p>-->
-<!--                                        <h4 class="tm-text-secondary tm-about-subtitle">Senior Director</h4>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                                -->
-<!--                                <div class="tm-carousel-item">-->
-<!--                                    <figure class="effect-honey mb-4">-->
-<!--                                        <img src="{% static 'img/about-02.jpg' %}" alt="Featured Item">-->
-<!--                                        <figcaption>-->
-<!--                                            <ul class="tm-social">-->
-<!--                                                <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>-->
-<!--                                                <li><a href="https://twitter.com" class="tm-social-link"><i class="fab fa-twitter"></i></a></li>-->
-<!--                                                <li><a href="https://instagram.com" class="tm-social-link"><i class="fab fa-instagram"></i></a></li>-->
-<!--                                            </ul>-->
-<!--                                        </figcaption>-->
-<!--                                    </figure>-->
-<!--                                    <div class="tm-about-text">-->
-<!--                                        <h3 class="mb-3 tm-text-primary tm-about-title">Jenifer Second</h3>-->
-<!--                                        <p>This is a carousel for a list of 10 team members. Each member image hover has 3 social icons.</p>-->
-<!--                                        <h4 class="tm-text-secondary tm-about-subtitle">Accounting Officer</h4>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-
-<!--                                <div class="tm-carousel-item">-->
-<!--                                    <figure class="effect-honey mb-4">-->
-<!--                                        <img src="{% static 'img/about-03.jpg' %}" alt="Featured Item">-->
-<!--                                        <figcaption>-->
-<!--                                            <ul class="tm-social">-->
-<!--                                                <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>-->
-<!--                                                <li><a href="https://twitter.com" class="tm-social-link"><i class="fab fa-twitter"></i></a></li>-->
-<!--                                                <li><a href="https://instagram.com" class="tm-social-link"><i class="fab fa-instagram"></i></a></li>-->
-<!--                                            </ul>-->
-<!--                                        </figcaption>-->
-<!--                                    </figure>-->
-<!--                                    <div class="tm-about-text">-->
-<!--                                        <h3 class="mb-3 tm-text-primary tm-about-title">David Second</h3>-->
-<!--                                        <p>Aliquam efficitur, velit ut aliquet molestie, nulla dolor faucibus neque, quis hendrerit.</p>-->
-<!--                                        <h4 class="tm-text-secondary tm-about-subtitle">Financial Assistant</h4>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-
-<!--                                <div class="tm-carousel-item">-->
-<!--                                    <figure class="effect-honey mb-4">-->
-<!--                                        <img src="{% static 'img/about-01.jpg' %}" alt="Featured Item">-->
-<!--                                        <figcaption>-->
-<!--                                            <ul class="tm-social">-->
-<!--                                                <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>-->
-<!--                                                <li><a href="https://twitter.com" class="tm-social-link"><i class="fab fa-twitter"></i></a></li>-->
-<!--                                                <li><a href="https://instagram.com" class="tm-social-link"><i class="fab fa-instagram"></i></a></li>-->
-<!--                                            </ul>-->
-<!--                                        </figcaption>-->
-<!--                                    </figure>-->
-<!--                                    <div class="tm-about-text">-->
-<!--                                        <h3 class="mb-3 tm-text-primary tm-about-title">Calvin Third</h3>-->
-<!--                                        <p>Aliquam efficitur, velit ut aliquet molestie, nulla dolor faucibus neque, quis hendrerit.</p>-->
-<!--                                        <h4 class="tm-text-secondary tm-about-subtitle">Designer</h4>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                                -->
-<!--                                <div class="tm-carousel-item">-->
-<!--                                    <figure class="effect-honey mb-4">-->
-<!--                                        <img src="{% static 'img/about-02.jpg' %}" alt="Featured Item">-->
-<!--                                        <figcaption>-->
-<!--                                            <ul class="tm-social">-->
-<!--                                                <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>-->
-<!--                                                <li><a href="https://twitter.com" class="tm-social-link"><i class="fab fa-twitter"></i></a></li>-->
-<!--                                                <li><a href="https://instagram.com" class="tm-social-link"><i class="fab fa-instagram"></i></a></li>-->
-<!--                                            </ul>-->
-<!--                                        </figcaption>-->
-<!--                                    </figure>-->
-<!--                                    <div class="tm-about-text">-->
-<!--                                        <h3 class="mb-3 tm-text-primary tm-about-title">Jenifer Third</h3>-->
-<!--                                        <p>This is a carousel for a list of 10 team members. Each member image hover has 3 social icons.</p>-->
-<!--                                        <h4 class="tm-text-secondary tm-about-subtitle">Program Director</h4>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-
-<!--                                <div class="tm-carousel-item">-->
-<!--                                    <figure class="effect-honey mb-4">-->
-<!--                                        <img src="{% static 'img/about-03.jpg' %}" alt="Featured Item">-->
-<!--                                        <figcaption>-->
-<!--                                            <ul class="tm-social">-->
-<!--                                                <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>-->
-<!--                                                <li><a href="https://twitter.com" class="tm-social-link"><i class="fab fa-twitter"></i></a></li>-->
-<!--                                                <li><a href="https://instagram.com" class="tm-social-link"><i class="fab fa-instagram"></i></a></li>-->
-<!--                                            </ul>-->
-<!--                                        </figcaption>-->
-<!--                                    </figure>-->
-<!--                                    <div class="tm-about-text">-->
-<!--                                        <h3 class="mb-3 tm-text-primary tm-about-title">David Three</h3>-->
-<!--                                        <p>Aliquam efficitur, velit ut aliquet molestie, nulla dolor faucibus neque, quis hendrerit.</p>-->
-<!--                                        <h4 class="tm-text-secondary tm-about-subtitle">Financial Assistant</h4>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-
-<!--                                <div class="tm-carousel-item">-->
-<!--                                    <figure class="effect-honey mb-4">-->
-<!--                                        <img src="{% static 'img/about-01.jpg' %}" alt="Featured Item">-->
-<!--                                        <figcaption>-->
-<!--                                            <ul class="tm-social">-->
-<!--                                                <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>-->
-<!--                                                <li><a href="https://twitter.com" class="tm-social-link"><i class="fab fa-twitter"></i></a></li>-->
-<!--                                                <li><a href="https://instagram.com" class="tm-social-link"><i class="fab fa-instagram"></i></a></li>-->
-<!--                                            </ul>-->
-<!--                                        </figcaption>-->
-<!--                                    </figure>-->
-<!--                                    <div class="tm-about-text">-->
-<!--                                        <h3 class="mb-3 tm-text-primary tm-about-title">Calvin Four</h3>-->
-<!--                                        <p>Aliquam efficitur, velit ut aliquet molestie, nulla dolor faucibus neque, quis hendrerit.</p>-->
-<!--                                        <h4 class="tm-text-secondary tm-about-subtitle">Media Partner</h4>-->
-<!--                                    </div>-->
-<!--                                </div>-->
                             </div>
                         </div>
                     </section>
                 </div>
-
                 <!-- Contact section -->
                 <div class="tm-section-wrap">
                     <div class="tm-parallax" data-parallax="scroll" data-image-src="{% static 'img/img-04.jpg' %}"></div>
@@ -802,7 +366,7 @@ https://templatemo.com/tm-555-upright
                                 </ul>
                                 <ul class="tm-contact-social">
                                     <li><a href="https://fb.com/templatemo" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
-                                    <li><a href="https://twitter.com" class="tm-social-link"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-twitter"></i></a></li>
                                     <li><a href="https://instagram.com" class="tm-social-link"><i class="fab fa-instagram"></i></a></li>
                                     <li><a href="https://youtube.com" class="tm-social-link"><i class="fab fa-youtube"></i></a></li>
                                 </ul>
@@ -810,12 +374,11 @@ https://templatemo.com/tm-555-upright
                         </div>
                     </div>
                 </div>
-
                 <!-- Copyright -->                
                 <div class="tm-section-wrap tm-copyright row">
                     <div class="col-12">
                         <div class="text-right">
-                            Copyright 20201 Serejka production
+                            Copyright 2021 Serejka production
                         </div> 
                     </div>
                 </div>                 
