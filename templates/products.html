@@ -134,29 +134,141 @@ https://templatemo.com/tm-555-upright
                                 <b>Основные модификации коаксиальных соединителей типа SMA:</b>
                             </p>
                         </div>
+<!--                        <script>-->
+<!--                            function OnClickEvent(Element) {-->
+<!--                                if (Element.className == 'btn_dormant') {-->
+<!--                                    hideAll(Element)-->
+<!--                                }-->
+<!--                                else if (Element.className == 'btn_clicked') {-->
+<!--                                    Element.className = 'btn_dormant';-->
+<!--                                }-->
+<!--                                return false;-->
+<!--                            }-->
+<!--                        </script>-->
+                        <script>
+                            function OnClickEvent(Element) {
+                                if (Element.className == 'btn_dormant') {
+                                    var a = document.querySelectorAll('.btn_clicked');
+                                    [].forEach.call(a, function (el) {
+                                        el.className = 'btn_dormant';
+                                    });
+                                    Element.className = 'btn_clicked';
 
-                        <div class="table-wrapper">
-                            <table class="fl-table">
-                                <thead>
-                                <tr>
-                                    {% for header in headers%}
-                                    <th>{{header}}</th>
+                                    var a = document.querySelectorAll('.product_table');
+                                    [].forEach.call(a, function (el) {
+                                        el.classList.add("hidden")
+                                    });
+                                    var tbl = document.getElementById(Element.getAttribute('data-tableid'))
+                                    tbl.classList.remove("hidden")
+                                }
+                                else if (Element.className == 'btn_clicked') {
+                                    Element.className = 'btn_dormant';
+                                    var tbl = document.getElementById(Element.getAttribute('data-tableid'))
+                                    tbl.classList.add("hidden")
+                                }
+                                return false;
+                            }
+                        </script>
+                        {% for button in buttons%}
+                             <button class="btn_dormant" type="button" id={{button.ident}} data-tableid={{button.table}}
+                                     onclick="return OnClickEvent(this);">
+                                 {% autoescape off %}{{button.label | linebreaks}}{% endautoescape %}
+                            </button>
+                        {% endfor %}
+
+                        {% for single_table in full_data%}
+                            <div class="table-wrapper product_table hidden" id={{single_table.ident}}>
+                                <table class="fl-table">
+                                    <thead>
+                                    <tr>
+                                        {% for header in single_table.column_names%}
+                                        <th>{{header}}</th>
+                                        {% endfor %}
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for line in single_table.content %}
+                                    <tr>
+                                        {% for cell in line%}
+                                            <td>
+                                                {{cell}}
+                                            </td>
+                                        {% endfor %}
+                                    </tr>
                                     {% endfor %}
-                                </tr>
-                                </thead>
-                                <tbody>
-                                {% for modification in modifications %}
-                                <tr>
-                                    {% for line in modification%}
-                                        <td>
-                                            {{line}}
-                                        </td>
-                                    {% endfor %}
-                                </tr>
-                                {% endfor %}
-                                <tbody>
-                            </table>
-                        </div>
+                                    <tbody>
+                                </table>
+                            </div>
+                        {% endfor %}
+
+
+
+<!--                        <div class="table-wrapper product_table hidden" id="product_table_1">-->
+<!--                            <table class="fl-table">-->
+<!--                                <thead>-->
+<!--                                <tr>-->
+<!--                                    {% for header in headers%}-->
+<!--                                    <th>{{header}}</th>-->
+<!--                                    {% endfor %}-->
+<!--                                </tr>-->
+<!--                                </thead>-->
+<!--                                <tbody>-->
+<!--                                {% for modification in modifications %}-->
+<!--                                <tr>-->
+<!--                                    {% for line in modification%}-->
+<!--                                        <td>-->
+<!--                                            {{line}}-->
+<!--                                        </td>-->
+<!--                                    {% endfor %}-->
+<!--                                </tr>-->
+<!--                                {% endfor %}-->
+<!--                                <tbody>-->
+<!--                            </table>-->
+<!--                        </div>-->
+<!--                        <div class="table-wrapper product_table hidden" id="product_table_2">-->
+<!--                            <table class="fl-table">-->
+<!--                                <thead>-->
+<!--                                <tr>-->
+<!--                                    {% for header in headers%}-->
+<!--                                    <th>{{header}}</th>-->
+<!--                                    {% endfor %}-->
+<!--                                </tr>-->
+<!--                                </thead>-->
+<!--                                <tbody>-->
+<!--                                {% for modification in modifications %}-->
+<!--                                <tr>-->
+<!--                                    {% for line in modification%}-->
+<!--                                        <td>-->
+<!--                                            {{line}}-->
+<!--                                        </td>-->
+<!--                                    {% endfor %}-->
+<!--                                </tr>-->
+<!--                                {% endfor %}-->
+<!--                                <tbody>-->
+<!--                            </table>-->
+<!--                        </div>-->
+<!--                        <div class="table-wrapper product_table hidden" id="product_table_3">-->
+<!--                            <table class="fl-table">-->
+<!--                                <thead>-->
+<!--                                <tr>-->
+<!--                                    {% for header in headers%}-->
+<!--                                    <th>{{header}}</th>-->
+<!--                                    {% endfor %}-->
+<!--                                </tr>-->
+<!--                                </thead>-->
+<!--                                <tbody>-->
+<!--                                {% for modification in modifications %}-->
+<!--                                <tr>-->
+<!--                                    {% for line in modification%}-->
+<!--                                        <td>-->
+<!--                                            {{line}}-->
+<!--                                        </td>-->
+<!--                                    {% endfor %}-->
+<!--                                </tr>-->
+<!--                                {% endfor %}-->
+<!--                                <tbody>-->
+<!--                            </table>-->
+<!--                        </div>-->
                     </section>
                 </div>
 

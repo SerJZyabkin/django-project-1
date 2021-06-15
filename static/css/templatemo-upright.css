@@ -864,3 +864,70 @@ h2{
         text-align: center;
     }
 }
+
+
+/*.btn-group button {*/
+/*    background-color: #4CAF50; !* Green background *!*/
+/*    border: 1px solid green; !* Green border *!*/
+/*    color: white; !* White text *!*/
+/*    padding: 10px 24px; !* Some padding *!*/
+/*    cursor: pointer; !* Pointer/hand icon *!*/
+/*    float: left; !* Float the buttons side by side *!*/
+/*}*/
+
+/*.btn-group button:not(:last-child) {*/
+/*    border-right: none; !* Prevent double borders *!*/
+/*}*/
+
+/*!* Clear floats (clearfix hack) *!*/
+/*.btn-group:after {*/
+/*    content: "";*/
+/*    clear: both;*/
+/*    display: table;*/
+/*}*/
+
+/*!* Add a background color on hover *!*/
+/*.btn-group button:hover {*/
+/*    background-color: #3e8e41;*/
+/*}*/
+
+.btn_dormant{
+    text-decoration: none;
+    text-align: center;
+    height: 150px;
+    width: 200px;
+    padding: 20px 0;
+    border: solid 1px #004F72;
+    border-radius: 4px;
+    font: 15px Arial, Helvetica, sans-serif;
+    font-weight: bold;
+      color: #E5FFFF;
+    background-color: #3BA4C7;
+    background-image: linear-gradient(top, #3BA4C7 0% ,#1982A5 100%);
+       box-shadow: 0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;
+      outline: none;
+}
+
+.btn_clicked{
+    text-decoration: none;
+    text-align: center;
+    height: 150px;
+    width: 200px;
+    padding: 20px 0;
+    border: solid 1px #004F72;
+    border-radius: 2px;
+    font: 15px Arial, Helvetica, sans-serif;
+    font-weight: bold;
+      color: #E5FFFF;
+    background-color: #fd7e14;
+    background-image: linear-gradient(top, #3BA4C7 0% ,#1982A5 100%);
+       box-shadow: 0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;
+      outline: none;
+}
+
+
+.hidden {
+    display: none; // скрывает текст
+}
+
+.product{}
