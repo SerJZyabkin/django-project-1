@@ -1,1 +1,1 @@
-django-project-1
+ldjango-project-1

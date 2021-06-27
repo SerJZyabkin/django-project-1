@@ -111,96 +111,96 @@ https://templatemo.com/tm-555-upright
                             </p>
                         </div>
 
-                        <div class="table-wrapper">
-                            <table class="fl-table">
-                                <tbody>
-                                {% for param in params %}
-                                <tr>
-                                    {% for note in param%}
-                                        <td>
-                                            {% for line in note%}
-                                            <p>{{line}}</p>
-                                            {% endfor %}
-                                        </td>
-                                    {% endfor %}
-                                </tr>
-                                {% endfor %}
-                                <tbody>
-                            </table>
-                        </div>
+<!--                        <div class="table-wrapper">-->
+<!--                            <table class="fl-table">-->
+<!--                                <tbody>-->
+<!--                                {% for param in params %}-->
+<!--                                <tr>-->
+<!--                                    {% for note in param%}-->
+<!--                                        <td>-->
+<!--                                            {% for line in note%}-->
+<!--                                            <p>{{line}}</p>-->
+<!--                                            {% endfor %}-->
+<!--                                        </td>-->
+<!--                                    {% endfor %}-->
+<!--                                </tr>-->
+<!--                                {% endfor %}-->
+<!--                                <tbody>-->
+<!--                            </table>-->
+<!--                        </div>-->
 
-                        <div class="tm-text-container">
-                            <p>
-                                <b>Основные модификации коаксиальных соединителей типа SMA:</b>
-                            </p>
-                        </div>
+<!--                        <div class="tm-text-container">-->
+<!--                            <p>-->
+<!--                                <b>Основные модификации коаксиальных соединителей типа SMA:</b>-->
+<!--                            </p>-->
+<!--                        </div>-->
+<!--&lt;!&ndash;                        <script>&ndash;&gt;-->
+<!--&lt;!&ndash;                            function OnClickEvent(Element) {&ndash;&gt;-->
+<!--&lt;!&ndash;                                if (Element.className == 'btn_dormant') {&ndash;&gt;-->
+<!--&lt;!&ndash;                                    hideAll(Element)&ndash;&gt;-->
+<!--&lt;!&ndash;                                }&ndash;&gt;-->
+<!--&lt;!&ndash;                                else if (Element.className == 'btn_clicked') {&ndash;&gt;-->
+<!--&lt;!&ndash;                                    Element.className = 'btn_dormant';&ndash;&gt;-->
+<!--&lt;!&ndash;                                }&ndash;&gt;-->
+<!--&lt;!&ndash;                                return false;&ndash;&gt;-->
+<!--&lt;!&ndash;                            }&ndash;&gt;-->
+<!--&lt;!&ndash;                        </script>&ndash;&gt;-->
 <!--                        <script>-->
 <!--                            function OnClickEvent(Element) {-->
 <!--                                if (Element.className == 'btn_dormant') {-->
-<!--                                    hideAll(Element)-->
+<!--                                    var a = document.querySelectorAll('.btn_clicked');-->
+<!--                                    [].forEach.call(a, function (el) {-->
+<!--                                        el.className = 'btn_dormant';-->
+<!--                                    });-->
+<!--                                    Element.className = 'btn_clicked';-->
+
+<!--                                    var a = document.querySelectorAll('.product_table');-->
+<!--                                    [].forEach.call(a, function (el) {-->
+<!--                                        el.classList.add("hidden")-->
+<!--                                    });-->
+<!--                                    var tbl = document.getElementById(Element.getAttribute('data-tableid'))-->
+<!--                                    tbl.classList.remove("hidden")-->
 <!--                                }-->
 <!--                                else if (Element.className == 'btn_clicked') {-->
 <!--                                    Element.className = 'btn_dormant';-->
+<!--                                    var tbl = document.getElementById(Element.getAttribute('data-tableid'))-->
+<!--                                    tbl.classList.add("hidden")-->
 <!--                                }-->
 <!--                                return false;-->
 <!--                            }-->
 <!--                        </script>-->
-                        <script>
-                            function OnClickEvent(Element) {
-                                if (Element.className == 'btn_dormant') {
-                                    var a = document.querySelectorAll('.btn_clicked');
-                                    [].forEach.call(a, function (el) {
-                                        el.className = 'btn_dormant';
-                                    });
-                                    Element.className = 'btn_clicked';
+<!--                        {% for button in buttons%}-->
+<!--                             <button class="btn_dormant" type="button" id={{button.ident}} data-tableid={{button.table}}-->
+<!--                                     onclick="return OnClickEvent(this);">-->
+<!--                                 {% autoescape off %}{{button.label | linebreaks}}{% endautoescape %}-->
+<!--                            </button>-->
+<!--                        {% endfor %}-->
 
-                                    var a = document.querySelectorAll('.product_table');
-                                    [].forEach.call(a, function (el) {
-                                        el.classList.add("hidden")
-                                    });
-                                    var tbl = document.getElementById(Element.getAttribute('data-tableid'))
-                                    tbl.classList.remove("hidden")
-                                }
-                                else if (Element.className == 'btn_clicked') {
-                                    Element.className = 'btn_dormant';
-                                    var tbl = document.getElementById(Element.getAttribute('data-tableid'))
-                                    tbl.classList.add("hidden")
-                                }
-                                return false;
-                            }
-                        </script>
-                        {% for button in buttons%}
-                             <button class="btn_dormant" type="button" id={{button.ident}} data-tableid={{button.table}}
-                                     onclick="return OnClickEvent(this);">
-                                 {% autoescape off %}{{button.label | linebreaks}}{% endautoescape %}
-                            </button>
-                        {% endfor %}
-
-                        {% for single_table in full_data%}
-                            <div class="table-wrapper product_table hidden" id={{single_table.ident}}>
-                                <table class="fl-table">
-                                    <thead>
-                                    <tr>
-                                        {% for header in single_table.column_names%}
-                                        <th>{{header}}</th>
-                                        {% endfor %}
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    {% for line in single_table.content %}
-                                    <tr>
-                                        {% for cell in line%}
-                                            <td>
-                                                {{cell}}
-                                            </td>
-                                        {% endfor %}
-                                    </tr>
-                                    {% endfor %}
-                                    <tbody>
-                                </table>
-                            </div>
-                        {% endfor %}
-
+<!--                        {% for single_table in full_data%}-->
+<!--                            <div class="table-wrapper product_table hidden" id={{single_table.ident}}>-->
+<!--                                <table class="fl-table">-->
+<!--                                    <thead>-->
+<!--                                    <tr>-->
+<!--                                        {% for header in single_table.column_names%}-->
+<!--                                        <th>{{header}}</th>-->
+<!--                                        {% endfor %}-->
+<!--                                    </tr>-->
+<!--                                    </thead>-->
+<!--                                    <tbody>-->
+<!--                                    {% for line in single_table.content %}-->
+<!--                                    <tr>-->
+<!--                                        {% for cell in line%}-->
+<!--                                            <td>-->
+<!--                                                {{cell}}-->
+<!--                                            </td>-->
+<!--                                        {% endfor %}-->
+<!--                                    </tr>-->
+<!--                                    {% endfor %}-->
+<!--                                    <tbody>-->
+<!--                                </table>-->
+<!--                            </div>-->
+<!--                        {% endfor %}-->
+<!--   sdqafqwfffada-->
 
 
 <!--                        <div class="table-wrapper product_table hidden" id="product_table_1">-->

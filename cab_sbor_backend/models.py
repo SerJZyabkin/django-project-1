@@ -2,19 +2,19 @@ from django.db import models
 from ckeditor_uploader.fields import RichTextUploadingField
 # Create your models here.
 
-class NewsEntry:
-    id : int
-    name : str
-    icon : str
-    description : str
 
-class LinkEntry:
-    id: int
-    name: str
-    description: str
-    extra_text: str
-    image : str
-    out_link : str
+class NewsEntry(models.Model):
+    name = models.TextField()
+    icon = models.CharField(max_length=100)
+    description = RichTextUploadingField()
+
+
+class ProductGroupEntry(models.Model):
+    name = models.TextField()
+    description = models.TextField()
+    extra_text = models.TextField()
+    image = models.ImageField(upload_to='pics')
+    product_group_num = models.IntegerField()
 
 
 class ProductCategory(models.Model):

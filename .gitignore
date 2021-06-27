@@ -1,5 +1,7 @@
 #Database
 /assets
+/cab_sbor_backend/migrations
+/media
 
 #PyCharm
 /.idea
